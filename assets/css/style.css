@@ -245,7 +245,7 @@ div#preloader {
   font-weight: bold;
 }
 #header .logo h1 a, #header .logo h1 a:hover {
-  color: yellow;
+  color: orange;
   text-decoration: none;
 }
 #header .logo img {
@@ -321,7 +321,7 @@ div#preloader {
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: yellow;
+  color: orange;
 }
 .navbar .dropdown ul {
   display: block;
@@ -350,7 +350,7 @@ div#preloader {
   font-size: 12px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: yellow;
+  color: orange;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -381,7 +381,7 @@ div#preloader {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: orange;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -429,10 +429,10 @@ div#preloader {
 .navbar-mobile a, .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: white;
+  color: navy;
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: navy;
+  color: black;
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
@@ -664,6 +664,43 @@ div#preloader {
   color: #333;
   font-size: 14px;
 }
+
+
+.single-services{
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.single-services .container{
+  padding: 2px 16px;
+  /* box-sizing: 0 8px 16px 0 black; */
+  height: 500px;
+}
+
+.single-services .container{
+  box-shadow: 0 4px 8px 0 black;
+}
+
+.single-services .container img{
+  height: 200px;
+}
+
+.single-services .container:hover{
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 black;
+}
+ 
+.box-bg > h4, p{
+  opacity: 1.5;
+  font-size: 1.1em; 
+  font-weight: 400;
+} 
+
+
 
 /*--------------------------------------------------------------
 # Team
