@@ -1366,6 +1366,7 @@ div#preloader {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact-area {
   height: auto;
   width: 100%;
@@ -1398,6 +1399,7 @@ div#preloader {
 .contact-icon {
   margin-bottom: 40px;
 }
+
 
 #google-map {
   height: 370px;
