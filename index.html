@@ -35,7 +35,7 @@
             <div class="container d-flex justify-content-between">
         
               <div class="logo">
-                <h1><a href="index.html"><img src="assets/img/img/logo.jpeg" alt="logo" width="100%" height="100%"></a></h1>
+                <h1><a href="index.html"><img src="assets/img/img/logo.jpeg" alt="logo" width="80px" height="100%"></a></h1>
               </div>
         
               <nav id="navbar" class="navbar">
@@ -266,7 +266,7 @@
                           <div class="container">
                             <img src="assets/img/img/fence.jpeg" alt="">
                           <div class="card">   
-                          <h4>Electric Fencing</h4>
+                          <h4>Geo Fencing</h4>
                             <p>
                               Create a virtual fence and get notified of vehicles moving in or out of the fence.
                             </p>
@@ -399,6 +399,34 @@
                         <div class="sent-message">Your message has been sent. Thank you!</div>
                       </div>
                       <div class="text-center"><button type="submit">Send Message</button></div>
+
+                      <script>
+                        // form submit to server
+                        let form = document.getElementById("#sumbit_form");
+                        form.onsubmit = async e => {
+                          e.preventDefault();
+                          let body = new FormData(form);
+                          const frm = Object.fromEntries(body.entries());
+        
+                          const frmvalues = Object.values(frm);
+        
+                          // make req to php server based on form data
+                          let xmlhttp = new XMLHttpRequest();
+                          xmlhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                              console.log(this.responseText);
+        
+                              alert(`Thanks for contacting me, I'll be sure to reply as soon as possible, you will now be redirected to the Home Page`)
+                              location.reload()
+                            }
+                          };
+                          console.log(frm);
+                          xmlhttp.open("POST", "./forms/contact.php?q=" + JSON.stringify(frm), true);
+                          xmlhttp.send();
+                        };
+        
+                      </script>
+
                     </form>
                   </div>
                 </div>

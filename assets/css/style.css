@@ -258,8 +258,9 @@ div#preloader {
     height: 64px;
     background: rgba(0, 0, 0, 0.8);
   }
-  #header .logo h1 {
-    font-size: 28px;
+  #header .logo{
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -2159,11 +2160,22 @@ span.email-notes {
   .work-right-text {
     padding: 150px 150px;
   }
+
+  
+  .footer-logo img{
+  width: 100%;
+  height: 100%; 
+}
 }
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1169px) {
   .slider-content {
     padding: 146px 0;
+  }
+
+  .footer-logo img{
+    width: 100%;
+    height: 100%; 
   }
 
   .work-right-text {
@@ -2185,6 +2197,11 @@ span.email-notes {
     font-size: 31px;
     line-height: 38px;
     padding: 0px 30px;
+  }
+
+  .footer-logo img{
+    width: 100%;
+    height: 100%; 
   }
 
   .tab-menu ul.nav li a {
