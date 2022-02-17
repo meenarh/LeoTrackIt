@@ -748,6 +748,10 @@ div#preloader {
   font-weight: 500;
 }
 
+.single-services .card>p {
+  border: none;
+}
+
 .single-services>p {
   color: #333;
   font-size: 14px;
