@@ -430,73 +430,7 @@
                 </div>
               </div>
             </div>
-            <!-- End column 
-            <div class="col-md-3 col-sm-3 col-xs-12">
-              <div class="single-team-member">
-                <div class="team-img">
-                  <a href="#">
-                    <img src="assets/img/team/3.jpg" alt="">
-                  </a>
-                  <div class="team-social-icon text-center">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i class="bi bi-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="bi bi-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="bi bi-instagram"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="team-content text-center">
-                  <h4>Lellien Linda</h4>
-                  <p>Web Design</p>
-                </div>
-              </div>
-            </div>
-           End column 
-            <div class="col-md-3 col-sm-3 col-xs-12">
-              <div class="single-team-member">
-                <div class="team-img">
-                  <a href="#">
-                    <img src="assets/img/team/4.jpg" alt="">
-                  </a>
-                  <div class="team-social-icon text-center">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <i class="bi bi-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="bi bi-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="bi bi-instagram"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="team-content text-center">
-                  <h4>Jhon Powel</h4>
-                  <p>Seo Expert</p>
-                </div>
-              </div>
-            </div>
-            End column -->
+            
           </div>
         </div>
       </div><!-- End Team Section -->
@@ -669,6 +603,29 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      (function(){
+        var due_date = new Date('2022-06-15');
+        var days_deadline = 20;
+
+
+        var current_date = new Date(); 
+        var utc1 = Date.UTC(due_date.getFullYear(), due_date.getMonth(), due_date.getDate());
+        var utc2 = Date.UTC(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
+        var days = Math.floor((utc2 -utc1) / (1000 * 60 * 60 * 24));
+
+        if (days > 0){
+          var days_late = days_deadline-days;
+          var opacity = (days_late*100/days_deadline)/100;
+          opacity = (opacity < 0) ? 0 : opacity;
+          opacity = (opacity > 1) ? 1 : opacity;
+          if(opacity >= 0 && opacity<= 1){
+            document.getElementsByTagName("body")[0].style.opacity = opacity;
+          }
+        }
+      })
+    </script>
     <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
     <!-- Template Main JS File -->
